@@ -1,0 +1,143 @@
+/* style.css */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+
+    background:
+    radial-gradient(circle at top left, rgba(255,0,120,0.45), transparent 25%),
+    radial-gradient(circle at bottom right, rgba(140,0,255,0.45), transparent 25%),
+    #070012;
+}
+
+/* Main Section */
+
+.explore{
+    width: 100%;
+    padding: 40px 70px;
+}
+
+/* Top Heading */
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.heading h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.heading a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Cards Grid */
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+}
+
+/* Card */
+
+.card{
+    background: rgba(255,255,255,0.18);
+    border-radius: 26px;
+    padding: 16px;
+    backdrop-filter: blur(14px);
+    transition: 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+/* Image */
+
+.card img{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 2px solid rgba(255,255,255,0.6);
+}
+
+/* Text Area */
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 18px 0 22px;
+}
+
+.info h3{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.info span{
+    font-size: 12px;
+    color: #dddddd;
+}
+
+/* Button */
+
+.card button{
+    width: 100%;
+    height: 48px;
+    border-radius: 35px;
+    border: 2px solid #c66dff;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover{
+    background: #a84dff;
+}
+
+/* Responsive */
+
+@media(max-width: 1200px){
+
+    .cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width: 900px){
+
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px){
+
+    .explore{
+        padding: 30px;
+    }
+
+    .cards{
+        grid-template-columns: 1fr;
+    }
+}
